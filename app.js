@@ -13,9 +13,9 @@ else if (arry %)
 
 //part 1: fizz buzz
 
-let sequence = 0;
+let sequence = 1;
 
-while (sequence <=0 -1){
+while (sequence <=101 -1){
     sequence ++;
 
 
@@ -33,9 +33,9 @@ while (sequence <=0 -1){
 
 //part 2: prime time
 
-let n = 0;
+let n = 1;
 
-while (n <= 3 -1){
+while (n <= 100 -1){
     n++;
      if (n <= 3 && n !== 1) {
         console.log(n)
@@ -78,16 +78,21 @@ console.log(findNextPrimeNum(3));
 
 ///part 3: feeling loopy
 
-let cell1 = {id: 42, name: "bruce", occupation: "knight", age: 41};
-let cell2 = {id:57, name: "bob", occupation: "fry cook", age: 19};
-let cell3 = {id:63, name: "blaine", occupation: "quiz master", age: 58};
-let cell4 = {id: 98, name: "bill", occupation: "doctor's assistant", age: 26};
-
-let arry = [{cell1}, {cell2}, {cell3}, {cell4}];
+let arry = [{id: 42, name: "bruce", occupation: "knight", age: 41},
+            {id:57, name: "bob", occupation: "fry cook", age: 19},
+            {id:63, name: "blaine", occupation: "quiz master", age: 58},
+            {id: 98, name: "bill", occupation: "doctor's assistant", age: 26}];
 
 function loopTill(){
-    
+    //need to create function that will loop through the objects inside array ;-; cannot figure out how to do that
 };
 
 
+const string = `ID, Name, Occupation, Age \n 42, Bruce, Knight, 41 \n 57, Bob, Fry Cook, 19 \n 63, Blaine, Quiz Master, 58 \n \
+98, Bill, Doctor's Assistant, 26`;
 
+const rows = string.split("\n");
+for (let row of rows){
+    const cells = row.split(",");
+console.log(cells.join (",")) ; 
+}
