@@ -11,9 +11,11 @@ else if (arry %)
 }
 */
 
+//part 1: fizz buzz
+
 let sequence = 0;
 
-while (sequence <=100 -1){
+while (sequence <=0 -1){
     sequence ++;
 
 
@@ -29,9 +31,11 @@ while (sequence <=100 -1){
 };
 
 
+//part 2: prime time
+
 let n = 0;
 
-while (n <= 60 -1){
+while (n <= 3 -1){
     n++;
      if (n <= 3 && n !== 1) {
         console.log(n)
@@ -47,6 +51,43 @@ while (n <= 60 -1){
     }
 };
 // only divisible by one and itself
-// N % n !== 0 
+// n % (n-1) === 0
+
+function checkPrime (start){
+    let i = 2;
+    while (i < start) {
+        if (start% i === 0) return false;
+        i++;
+    }
+    return [true, i];
+}
+
+function findNextPrimeNum(startingNum){
+    let starting = startingNum + 1;
+    while (starting){
+        if (checkPrime(starting)){
+            break;
+        }
+        starting++;
+    }
+    return starting;
+}
+
+console.log(findNextPrimeNum(3));
+
+
+///part 3: feeling loopy
+
+let cell1 = {id: 42, name: "bruce", occupation: "knight", age: 41};
+let cell2 = {id:57, name: "bob", occupation: "fry cook", age: 19};
+let cell3 = {id:63, name: "blaine", occupation: "quiz master", age: 58};
+let cell4 = {id: 98, name: "bill", occupation: "doctor's assistant", age: 26};
+
+let arry = [{cell1}, {cell2}, {cell3}, {cell4}];
+
+function loopTill(){
+    
+};
+
 
 
